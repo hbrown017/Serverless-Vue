@@ -44,6 +44,10 @@ a:visited{color:white;}
     flex-direction:column;
 }
 
+.navbar-nav li:hover{
+    background-color: #FFFFFF44;
+}
+
 @media screen and (max-width:760px){
     .modules{display:flex; flex-direction:column; justify-content: space-evenly;}
 }
