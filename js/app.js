@@ -21,7 +21,7 @@ Vue.component('page-nav', {
     </nav>`,
     data(){
         return{
-            pages: ['Home', 'About']
+            pages: ['Home', 'About', 'Login']
         }
     }
 })
@@ -51,7 +51,8 @@ Vue.component('page-footer', {
 const routes = [
     { path: '/', component: HomeTemplate },
     { path: '/Home', component: HomeTemplate },
-    { path: '/About', component: AboutTemplate }
+    { path: '/About', component: AboutTemplate },
+    { path: '/Login', component: LoginTemplate }
 ]
 
 // create Vue router object from vue-router.min.js
@@ -59,5 +60,11 @@ const router = new VueRouter({routes})
 
 new Vue({
     el: '#app',
-    router
+    router,
+    watch:{
+        '$route' (to, from) {
+            //if(to.path == '/Login')
+                this.$router.go();
+        }
+    }
 });
