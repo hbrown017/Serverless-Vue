@@ -1,53 +1,66 @@
 *{margin:0; padding:0;} /*get rid of browser default margins*/
-html, body{height:100%;}
+html, body{height:100%; --snow: #FFF}
 .container{ padding-top:100px; padding-bottom:100px; min-height:100%;}
 .main{overflow:auto; padding-bottom:100px;}
 .modules{display:flex; flex-direction:row; justify-content: space-evenly;}
-.ftr{position:relative; height:100px; margin-top:-100px; clear:both;}
-.ftrContent{display:flex; flex-direction:column; padding-top:5px;}
-a:link{color:white}
-a:visited{color:white;}
 
-.clr{color:#fff}
+.pageHdr{color: var(--snow)}
 .green{ border-radius: 5px; padding:5px; background-color:#5AC18E}
 .red{border-radius: 5px; padding:5px; background-color:#C15A5A}
-.orge{ border-radius: 5px; padding:5px; background-color:rgb(179, 104, 7)}
+.blue{ border-radius: 5px; padding:5px; background-color:#539EE3}
 
-.otherRed{
-    background-color:rgb(122, 121, 121);
+.loginNote{
+    background-color:rgb(139, 139, 139);
     font-size:1em;
     padding-top:5px;
     padding-bottom:5px;
     padding-left:25px;
     color:#FFF;
 }
-.contents{
+
+.loginContent{
     padding:25px;
-    background-color:rgb(37, 115, 192);
-    color:#FFF;
+    background-color:#5AC18E;
+    color:var(--snow);
 }
+
 .err{
+    text-align:center;
     background-color:#C15A5A;
-    color:#FFF;
-    font-size:1.7em;
+    color:var(--snow);
+    font-size:1.5em;
     width:100%;
     display:flex;
     flex-direction:column;
 }
+
 .data{
     padding:25px;
-    background-color:#5AC18E;
-    color:#FFF;
+    background-color:rgb(102, 102, 102);
+    color:var(--snow);
     font-size:1.2em;
     width:100%;
     display:flex;
     flex-direction:column;
 }
 
-.navbar-nav li:hover{
-    background-color: #FFFFFF44;
+nav{
+    background-color: rgb(6,70,128);
+    animation: nav-load 800ms;
 }
+.navbar-nav li:hover{background-color: #FFFFFF44;}
+a:link{color:var(--snow)}
+a:visited{color:var(--snow)}
+
+footer{background-color: rgb(6,70,128); color:var(--snow);}
+.ftr{position:relative; height:100px; margin-top:-100px; clear:both;}
+.ftrContent{display:flex; flex-direction:column; padding-top:15px;}
 
 @media screen and (max-width:760px){
     .modules{display:flex; flex-direction:column; justify-content: space-evenly;}
+}
+
+@keyframes nav-load{
+    0%{transform:translateY(-100%)}
+    100%{transform:translateY(0)}
 }

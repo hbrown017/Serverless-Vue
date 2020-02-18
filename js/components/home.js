@@ -1,9 +1,11 @@
 const HomeTemplate = {
     template: `
     <div class="container">
-        <h1 class="green clr">Home Page</h1>
-        <hr>
-        <p>Welcome<br/><br/>{{text}}</p>
+        <div class="animated fadeInDown">
+            <h1 class="green pageHdr">Home Page</h1>
+            <hr>
+            <p>Welcome<br/><br/>{{text}}</p>
+        </div>
     </div>`,
     data(){
         return{

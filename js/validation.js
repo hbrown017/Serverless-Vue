@@ -67,7 +67,7 @@ form.addEventListener('submit', (e) =>{
         messages.push(' Password must be less than 20 characters')
 
     if(messages.length > 0){
-        e.preventDefault() 
+        e.preventDefault()
         errors.innerText = messages.join(', ')
     }
 })

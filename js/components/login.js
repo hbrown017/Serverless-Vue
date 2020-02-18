@@ -1,32 +1,34 @@
 var LoginTemplate = {
     template: `
     <div class="container">
-        <h1 class="orge clr">Login Page</h1>
-        <hr/>
-        <span id="error" class="err"></span>
-        <div class="contents">
-            <form id="form" action="#" method="POST">
-                <div class="row">
-                    <div class="col-md-4">
-                        <label for="userName"> Username:</label>
-                        <input type="text" class="form-control" name="userName" id="userName" required>
+        <div class="animated bounce">
+            <h1 class="blue pageHdr">Login Page</h1>
+            <hr/>
+            <span id="error" class="err"></span>
+            <div class="loginContent">
+                <form id="form" action="#" method="POST">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label for="userName"> Username:</label>
+                            <input type="text" class="form-control" name="userName" id="userName" required>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="pw">Password:</label>
+                            <input type="password" class="form-control" name="pw" id="pw" required>
+                        </div>
+                        <div class="col-md-4">
+                            <br/>
+                            <button type="submit" class="btn btn-secondary">Submit</button>
+                        </div>
                     </div>
-                    <div class="col-md-4">
-                        <label for="pw">Password:</label>
-                        <input type="password" class="form-control" name="pw" id="pw" required>
-                    </div>
-                    <div class="col-md-4">
-                        <br/>
-                        <button type="submit" class="btn btn-secondary">Submit</button>
-                    </div>
-                </div>
-            </form>
+                </form>
+            </div>
+            <div class="loginNote">
+                {{text}}
+                <a v-bind:href="link" target="_blank">{{link}}</a>
+            </div>
+            <span id="data" class="data"></span>
         </div>
-        <div class="otherRed">
-            {{text}}
-            <a v-bind:href="link" target="_blank">{{link}}</a>
-        </div>
-        <span id="data" class="data"></span>
     </div>`,
     data(){
         return{

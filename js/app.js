@@ -5,7 +5,7 @@
 
 Vue.component('page-nav', {
     template: `
-    <nav class="navbar navbar-expand-lg bg-primary text-uppercase fixed-top" id="mainNav">
+    <nav class="navbar navbar-expand-lg text-uppercase fixed-top" id="mainNav">
         <router-link class="navbar-brand js-scroll-trigger" to="/Home"><h4>Brown</h4></router-link>
         <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-secondary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <i class="far fa-bars"></i>
@@ -28,7 +28,7 @@ Vue.component('page-nav', {
 
 Vue.component('page-footer', {
     template: `
-    <footer class="ftr bg-warning">
+    <footer class="ftr">
     <div class="modules">
         <div class="col-md-12 ftrContent">
             <!-- loop through nav info -->
