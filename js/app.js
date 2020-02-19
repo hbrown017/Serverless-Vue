@@ -5,16 +5,18 @@
 
 Vue.component('page-nav', {
     template: `
-    <nav class="navbar navbar-expand-lg text-uppercase fixed-top" id="mainNav">
-        <router-link class="navbar-brand js-scroll-trigger" to="/Home"><h4>Brown</h4></router-link>
-        <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-secondary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="far fa-bars"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
+    <nav class="navbar">
+        <router-link class="brand-title" to="/Home"><h4>Brown</h4></router-link>
+        <a href="#" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+            <ul>
                 <!-- loop through nav page links -->
-                <li class="nav-item mx-0 mx-lg-1" v-for="pageName in pages">
-                    <router-link class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" v-bind:to="'/' + pageName">{{pageName}}</a>
+                <li v-for="pageName in pages">
+                    <router-link v-bind:to="'/' + pageName">{{pageName}}</a>
                 </li>
             </ul>
         </div>
@@ -41,7 +43,7 @@ Vue.component('page-footer', {
         info: {
             'Developer:': 'Harry Brown',
             'Occupation:': 'Software/Technology Industry',
-            'Updated:' : '2/1/2020'
+            'Updated:' : '2/14/2020'
         }
     }
 }
@@ -68,3 +70,11 @@ new Vue({
         }
     }
 });
+
+//-------- Hamburger Menu Dropdown ----------
+const toggleButton = document.getElementsByClassName('toggle-button')[0]
+const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+
+toggleButton.addEventListener('click', () =>{
+    navbarLinks.classList.toggle('active')
+})

@@ -1,9 +1,7 @@
 
 let userList = []
-var accessToken = '';
 
 //---------------- API GET -------------------
-
 function getUsers(){
     return getFetch('https://jsonplaceholder.typicode.com/users')
 }
@@ -40,7 +38,7 @@ getUsers().then(data => {
     })
 })
 
-//--------------- form validation ---------------------
+//--------------- FORM VALIDATION ---------------------
 
 const name = document.getElementById("userName")
 const password = document.getElementById("pw")

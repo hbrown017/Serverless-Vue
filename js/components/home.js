@@ -1,15 +1,14 @@
 const HomeTemplate = {
     template: `
-    <div class="container">
-        <div class="animated fadeInDown">
-            <h1 class="green pageHdr">Home Page</h1>
-            <hr>
-            <p>Welcome<br/><br/>{{text}}</p>
-        </div>
+    <div class="animated fadeInDown">
+        <h1 class="green pageHdr">Home Page</h1>
+        <hr>
+        <span class="home"><h5>{{rowOne}}</h5><h1>{{rowTwo}}</h1></span>
     </div>`,
     data(){
         return{
-            text: 'This is a front-end site structured using VueJS routing and components for code reusability and cost efficiency; ideal for a serverless architecture approach.',
+            rowOne: 'A dynamic, serverless architectural design approach for code reusability, performance, and',
+            rowTwo: 'insane monthly-cost savings!'
         }
     }
 };
